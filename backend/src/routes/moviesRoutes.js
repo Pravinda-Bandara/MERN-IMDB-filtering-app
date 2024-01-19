@@ -1,11 +1,11 @@
 import express from 'express';
 import genreOptions from '../utils/genreOptions.js';
-import Moves from '../models/Moves.js';
+import Movie from '../models/movieModel.js'
 
-export const router = express.Router();
+export const movieRouter = express.Router();
 
 //GET /movies?page=1&limit=10&search=action&sort=year&genre=Action
-router.get("/movies", async (req, res) => {
+movieRouter.get("/movies", async (req, res) => {
     try {
         const page = parseInt(req.query.page) - 1 || 0;
         const limit = parseInt(req.query.limit) || 5;
@@ -23,7 +23,7 @@ router.get("/movies", async (req, res) => {
             sortBy[sort[0]] = "asc";
         }
 
-        const movies = await Moves.find({ name: { $regex: search, $options: "i" } })
+        const movies = await Movie.find({ name: { $regex: search, $options: "i" } })
             .where("genre").in([...genre]).sort(sortBy).skip(page * limit).limit(limit);
         const response={error:false,total,page:page+1,limit,genres:genreOptions,movies}
 
