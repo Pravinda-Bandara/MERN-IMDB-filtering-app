@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Search from "./components/search/Search.jsx";
 import Table from "./components/table/Table.jsx";
+import {Pagination} from "./components/pagination/Pagination.jsx";
 
 function App() {
     const base_url = 'http://localhost:5050/api/v1/movies';
@@ -40,6 +41,12 @@ function App() {
                     <div className="body">
                         <div className="table-container">
                             <Table movies={obj.movies?obj.movies:[]}/>
+                            <Pagination
+                                page={page}
+                                limit={obj.limit ? obj.limit : 0}
+                                total={obj.total ? obj.total : 0}
+                                setPage={setPage}
+                            />
                         </div>
                         <div className="filter_container"></div>
                     </div>
