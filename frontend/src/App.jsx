@@ -29,7 +29,17 @@ function App() {
 
     return (
         <>
-            <h1>work</h1>
+            <div className="wrapper">
+                <div className="container">
+                    <div className="head">
+                        <img src="../public/images/logo.png" alt="logo" className="logo"/>
+                    </div>
+                    <div className="body">
+                        <div className="table-container"></div>
+                        <div className="filter_container"></div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
