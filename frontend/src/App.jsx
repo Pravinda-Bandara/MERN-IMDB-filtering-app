@@ -1,6 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Search from "./components/search/Search.jsx";
 
 function App() {
     const base_url = 'http://localhost:5050/api/v1/movies';
@@ -32,7 +33,8 @@ function App() {
             <div className="wrapper">
                 <div className="container">
                     <div className="head">
-                        <img src="../public/images/logo.png" alt="logo" className="logo"/>
+                        <img src="/images/logo.png" alt="logo" className="logo"/>
+                        <Search setSearch={(setSearch(search))}/>
                     </div>
                     <div className="body">
                         <div className="table-container"></div>
