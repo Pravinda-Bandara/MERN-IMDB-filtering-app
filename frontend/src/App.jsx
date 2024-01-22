@@ -1,12 +1,37 @@
-import './App.css'
+import './App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 function App() {
+    const base_url = 'http://localhost:5050/api/v1/movies';
+    const [obj, setObj] = useState({});
+    const [sort, setSort] = useState({ sort: 'rating', order: 'desc' });
+    const [filterGenre, setFilterGenre] = useState([]);
+    const [page, setPage] = useState(1);
+    const [search, setSearch] = useState('');
 
-  return (
-    <>
-        <h1>work</h1>
-    </>
-  )
+    const getAllMovies = () => {
+        const url = `${base_url}?page=${page}&sort=${sort.sort},${sort.order}&genre=${filterGenre.toString()}&search=${search}`;
+
+        axios.get(url)
+            .then(response => {
+                setObj(response.data);
+                console.log(response.data)
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    };
+
+    useEffect(() => {
+        getAllMovies();
+    }, [sort, filterGenre, page, search]);
+
+    return (
+        <>
+            <h1>work</h1>
+        </>
+    );
 }
 
-export default App
+export default App;
