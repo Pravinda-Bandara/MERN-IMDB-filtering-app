@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Search from "./components/search/Search.jsx";
 import Table from "./components/table/Table.jsx";
 import {Pagination} from "./components/pagination/Pagination.jsx";
+import Sort from "./components/sort/Sort.jsx";
+import Genre from "./components/genre/Genre.jsx";
 
 function App() {
     const base_url = 'http://localhost:5050/api/v1/movies';
@@ -33,13 +35,13 @@ function App() {
     return (
         <>
             <div className="wrapper">
-                <div className="container">
-                    <div className="head">
+                <div className="container-app">
+                    <div className="head-app">
                         <img src="/images/logo.png" alt="logo" className="logo"/>
                         <Search setSearch={setSearch} />
                     </div>
-                    <div className="body">
-                        <div className="table-container">
+                    <div className="body-app">
+                        <div className="table_container">
                             <Table movies={obj.movies?obj.movies:[]}/>
                             <Pagination
                                 page={page}
@@ -48,7 +50,14 @@ function App() {
                                 setPage={setPage}
                             />
                         </div>
-                        <div className="filter_container"></div>
+                        <div className="filter_container">
+                            <Sort sort={sort} setSort={(sort) => setSort(sort)} />
+                            <Genre
+                                filterGenre={filterGenre}
+                                genres={obj.genres ? obj.genres : []}
+                                setFilterGenre={(genre) => setFilterGenre(genre)}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

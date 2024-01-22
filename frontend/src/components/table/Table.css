@@ -1,4 +1,4 @@
-.heading {
+.heading-table {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +68,7 @@
     font-weight: 500;
 }
 
-.genre_container {
+.genre-container-table {
     flex: 1;
     display: flex;
     align-items: center;

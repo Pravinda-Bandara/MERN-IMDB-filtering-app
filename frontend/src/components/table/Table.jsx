@@ -3,7 +3,7 @@ import './Table.css';
 export function Table({ movies }) {
     return (
         <div className="container">
-            <div className="heading">
+            <div className="heading-table">
                 <p className="title_tab">Title</p>
                 <p className="genre_tab">Genre</p>
                 <p className="rating_tab">Rating</p>
@@ -16,7 +16,7 @@ export function Table({ movies }) {
                             {movie.name} ({movie.year})
                         </p>
                     </div>
-                    <div className="genre_container">
+                    <div className="genre-container-table">
                         {movie.genre.map((genre, index) => (
                             <p key={genre} className="movie_genre">
                                 {genre}

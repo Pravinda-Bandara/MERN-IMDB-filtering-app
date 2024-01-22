@@ -1,39 +1,49 @@
-.wrapper{
+.wrapper {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
-.container{
+
+.container-app {
     width: 1000px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background-color: white;
+    border: 1px solid black;
 }
 
-.head{
+.head-app {
     display: flex;
-    align-items: center;
+    align-content: center;
     height: 80px;
     background-color: black;
     justify-content: space-between;
+    width: 100%;
 }
-.body{
-    height: 500px;
-    display: flex;
-}
-.logo{
+
+.logo {
     width: 100px;
     object-fit: contain;
     margin-left: 15px;
 }
-.table_container{
-    flex:3;
-    position: relative;
+
+.body-app {
+    height: 500px;
+    display: flex;
+
 }
-.filter_container{
-    flex:1;
+
+.table_container {
+    position: relative;
+    flex: 3;
+}
+
+.filter_container {
+    flex: 1;
+    border-left: 1px solid black;
 }

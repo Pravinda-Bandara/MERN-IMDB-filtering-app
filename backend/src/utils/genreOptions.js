@@ -1,5 +1,5 @@
 const genreOptions = [
-    "Actions",
+    "Action",
     "Romance",
     "Fantasy",
     "Drama",
