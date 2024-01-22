@@ -1,0 +1,32 @@
+.container-genre{
+    margin: 10px;
+    align-items: flex-start;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.heading-genre {
+    margin: 0;
+    font-size: 16px;
+    margin: 10px;
+    text-align: center;
+}
+
+.genre-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.genre {
+    min-width: 90px;
+    display: flex;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.genre_label {
+    margin: 0 0 0 5px;
+}
