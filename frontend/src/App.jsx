@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Search from "./components/search/Search.jsx";
+import Table from "./components/table/Table.jsx";
 
 function App() {
     const base_url = 'http://localhost:5050/api/v1/movies';
@@ -34,10 +35,12 @@ function App() {
                 <div className="container">
                     <div className="head">
                         <img src="/images/logo.png" alt="logo" className="logo"/>
-                        <Search setSearch={(setSearch(search))}/>
+                        <Search setSearch={setSearch} />
                     </div>
                     <div className="body">
-                        <div className="table-container"></div>
+                        <div className="table-container">
+                            <Table movies={obj.movies?obj.movies:[]}/>
+                        </div>
                         <div className="filter_container"></div>
                     </div>
                 </div>

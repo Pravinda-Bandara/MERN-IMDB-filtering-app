@@ -1,9 +1,10 @@
-import style from './Search.css'
-export function Search({setSearch}) {
+import './Search.css';
+
+export function Search({ setSearch }) {
     return (
         <input
             type="text"
-            className={style.search}
+            className="search"
             placeholder="Search"
             onChange={({ currentTarget: input }) => setSearch(input.value)}
         />
