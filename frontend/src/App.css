@@ -40,10 +40,10 @@
 
 .table_container {
     position: relative;
-    flex: 3;
+    flex:7;
 }
 
 .filter_container {
-    flex: 1;
+    flex:2;
     border-left: 1px solid black;
 }

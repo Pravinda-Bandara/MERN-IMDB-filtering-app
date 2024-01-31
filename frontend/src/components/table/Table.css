@@ -6,9 +6,9 @@
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    margin: 10px;
+    padding:10px;
     background-color: white;
-    border-radius: 4px;
+    border-bottom:1px solid black ;
 }
 
 .title_tab {
