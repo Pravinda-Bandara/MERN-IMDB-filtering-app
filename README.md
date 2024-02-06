@@ -33,9 +33,6 @@
 - **Database:** MongoDB
 - **Object Modeling:** Mongoose
 
-### Image Attribution
-
-- Screenshot image by [Author Name](Link to Author Profile) from [Unsplash](https://unsplash.com/)
 
 ### Usage Disclaimer
 
